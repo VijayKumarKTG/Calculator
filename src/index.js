@@ -73,7 +73,7 @@ pi.addEventListener('click', () => {
 
 const sqrt = document.querySelector('.sqrt');
 sqrt.addEventListener('click', () => {
-  input.value = Math.sqrt(Number(input.value)).toLocaleString;
+  input.value = Math.sqrt(Number(input.value)).toLocaleString();
 });
 
 /**
@@ -95,19 +95,19 @@ const equal = document.querySelector('.equal');
 equal.addEventListener('click', () => {
   switch (opcode) {
     case '+':
-      input.value = oprand + Number(input.value).toLocaleString();
+      input.value = (oprand + Number(input.value)).toLocaleString();
       break;
     case '-':
-      input.value = oprand - Number(input.value).toLocaleString();
+      input.value = (oprand - Number(input.value)).toLocaleString();
       break;
     case 'x':
-      input.value = oprand * Number(input.value).toLocaleString();
+      input.value = (oprand * Number(input.value)).toLocaleString();
       break;
     case '/':
-      input.value = oprand / Number(input.value).toLocaleString();
+      input.value = (oprand / Number(input.value)).toLocaleString();
       break;
-    case '%':
-      input.value = oprand % Number(input.value).toLocaleString();
+    case 'mod':
+      input.value = (oprand % Number(input.value)).toLocaleString();
       break;
     case 'x^y':
       input.value = Math.pow(oprand, Number(input.value)).toLocaleString();
